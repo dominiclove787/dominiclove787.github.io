@@ -173,10 +173,6 @@
             font-size: 20px;
         }
         
-        .toggle-item.hidden {
-            display: none;
-        }
-        
         .lawmakers-section {
             grid-column: 1 / -1;
             display: flex;
@@ -442,7 +438,7 @@
         
         <div class="toggle-section">
             <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholdedr</div>
+                <div class="toggle-icon">🚗</div>
                 <div class="toggle-title">CARS</div>
                 <div class="toggle-content">
                     <h3>Vehicle Safety Innovations</h3>
@@ -452,7 +448,6 @@
                         <li>Speeding</li>
                         <li>Not using signals</li>
                         <li>Skipping stop signs</li>
-
                     </ul>
                     <div class="image-container">
                         <img src="images/car-safety.jpg" alt="Car Safety Features" class="section-image" onerror="this.style.display='none'">
@@ -462,38 +457,35 @@
             </div>
             
             <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+                <div class="toggle-icon">🚶</div>
                 <div class="toggle-title">PEDESTRIANS</div>
                 <div class="toggle-content">
                     <h3>Pedestrian Safety</h3>
-                        <li>Placeholder image</li>
                     <p>Pedestrians are among the most vulnerable road users. Safety measures include:</p>
                     <ul style="text-align: left; margin: 20px 0;">
                         <li>Phone usage while walking</li>
                         <li>Awareness in roads</li>
-                        <li>Ussage of designated walkways</li>
-                        <li>Placeholder text</li>
-
+                        <li>Usage of designated walkways</li>
+                        <li>Following traffic signals</li>
                     </ul>
                     <div class="image-container">
                         <img src="images/pedestrian-safety.jpg" alt="Pedestrian Safety" class="section-image" onerror="this.style.display='none'">
                     </div>
-                    <p>Pedestrians have a huge toll on responsibility in road safety....... More texxt placeholder</p>
+                    <p>Pedestrians have a huge toll on responsibility in road safety. Being aware of surroundings can prevent accidents.</p>
                 </div>
             </div>
             
             <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+                <div class="toggle-icon">👮</div>
                 <div class="toggle-title">POLICE OFFICERS</div>
                 <div class="toggle-content">
                     <h3>Enforcing the Laws!</h3>
                     <p>Police officers play a crucial role in maintaining road safety through:</p>
                     <ul style="text-align: left; margin: 20px 0;">
                         <li>Traffic law enforcement</li>
-                        <li>Security checkpoints </li>
+                        <li>Security checkpoints</li>
                         <li>Create fear among drivers</li>
                         <li>Create consequences for actions</li>
-
                     </ul>
                     <div class="image-container">
                         <img src="images/police-traffic.jpg" alt="Police Traffic Control" class="section-image" onerror="this.style.display='none'">
@@ -503,13 +495,16 @@
             </div>
             
             <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+                <div class="toggle-icon">🏙️</div>
                 <div class="toggle-title">URBAN PLANNERS</div>
                 <div class="toggle-content">
                     <h3>Designing for the future</h3>
                     <p>Urban planners contribute to road safety through thoughtful infrastructure design:</p>
                     <ul style="text-align: left; margin: 20px 0;">
-                        <li>Separated </li>
+                        <li>Separated bike lanes</li>
+                        <li>Pedestrian-friendly crossings</li>
+                        <li>Traffic calming measures</li>
+                        <li>Proper signage and lighting</li>
                     </ul>
                     <div class="image-container">
                         <img src="images/urban-planning.jpg" alt="Urban Planning" class="section-image" onerror="this.style.display='none'">
@@ -520,7 +515,7 @@
             
             <div class="lawmakers-section">
                 <div class="toggle-item lawmakers-item" onclick="expandSection(this)">
-                    <div class="toggle-icon">Placeholdder image</div>
+                    <div class="toggle-icon">⚖️</div>
                     <div class="toggle-title">LAWMAKERS</div>
                     <div class="toggle-content">
                         <h3>Legislative Impact on Road Safety</h3>
@@ -547,8 +542,7 @@
             <div class="counter-text">By the time you have read this,</div>
             <div class="counter-number" id="fatalities-count">0</div>
             <div class="counter-text">people have been killed from road fatalities</div>
-            <div class="counter-text">*acording to the world health organization</div>
-
+            <div class="counter-text">*according to the world health organization</div>
         </div>
     </div>
     
@@ -568,10 +562,10 @@
             </div>
             
             <div class="source-category">
-                <h3 class="category-title">Data Sources TTESST</h3>
+                <h3 class="category-title">Data Sources</h3>
                 <ul class="source-list">
                     <li class="source-item">
-                        Test Test Test
+                        World Health Organization - Global Road Safety Report
                     </li>
                 </ul>
             </div>
@@ -660,12 +654,8 @@
         let backButton = document.querySelector('.back-btn');
         
         function expandSection(element) {
-            // Hide all other sections
-            document.querySelectorAll('.toggle-item').forEach(item => {
-                if (item !== element) {
-                    item.classList.add('hidden');
-                }
-            });
+            // First, collapse any currently expanded section
+            collapseAll();
             
             // Expand the clicked section
             element.classList.add('expanded');
@@ -681,14 +671,10 @@
             // Remove expanded class from all sections
             document.querySelectorAll('.toggle-item').forEach(item => {
                 item.classList.remove('expanded');
-                item.classList.remove('hidden');
             });
             
             // Hide the back button
             backButton.style.display = 'none';
-            
-            // Scroll back to top of toggle section
-            document.querySelector('.toggle-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
         // Sources modal functionality
