@@ -20,6 +20,127 @@
             position: relative;
         }
         
+        /* Color states for expanded sections - applied to specific elements */
+        .drivers-theme .emphasized,
+        .drivers-theme .toggle-item,
+        .drivers-theme .footer-link,
+        .drivers-theme .section-title,
+        .drivers-theme .general-problem,
+        .drivers-theme .quotes-sources {
+            color: #00ffff !important;
+            border-color: #00ffff !important;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7) !important;
+        }
+        
+        .drivers-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(0, 255, 255, 0.7) !important;
+            border-color: #00ffff !important;
+        }
+        
+        .drivers-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(0, 255, 255, 0.8) !important;
+        }
+        
+        .pedestrians-theme .emphasized,
+        .pedestrians-theme .toggle-item,
+        .pedestrians-theme .footer-link,
+        .pedestrians-theme .section-title,
+        .pedestrians-theme .general-problem,
+        .pedestrians-theme .quotes-sources {
+            color: #ffa500 !important;
+            border-color: #ffa500 !important;
+            text-shadow: 0 0 10px rgba(255, 165, 0, 0.7) !important;
+        }
+        
+        .pedestrians-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(255, 165, 0, 0.7) !important;
+            border-color: #ffa500 !important;
+        }
+        
+        .pedestrians-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(255, 165, 0, 0.8) !important;
+        }
+        
+        .police-theme .emphasized,
+        .police-theme .toggle-item,
+        .police-theme .footer-link,
+        .police-theme .section-title,
+        .police-theme .general-problem,
+        .police-theme .quotes-sources {
+            color: #0044ff !important;
+            border-color: #0044ff !important;
+            text-shadow: 0 0 10px rgba(0, 68, 255, 0.7) !important;
+        }
+        
+        .police-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(0, 68, 255, 0.7) !important;
+            border-color: #0044ff !important;
+        }
+        
+        .police-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(0, 68, 255, 0.8) !important;
+        }
+        
+        .urban-theme .emphasized,
+        .urban-theme .toggle-item,
+        .urban-theme .footer-link,
+        .urban-theme .section-title,
+        .urban-theme .general-problem,
+        .urban-theme .quotes-sources {
+            color: #ff00ff !important;
+            border-color: #ff00ff !important;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.7) !important;
+        }
+        
+        .urban-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(255, 0, 255, 0.7) !important;
+            border-color: #ff00ff !important;
+        }
+        
+        .urban-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(255, 0, 255, 0.8) !important;
+        }
+        
+        .lawmakers-theme .emphasized,
+        .lawmakers-theme .toggle-item,
+        .lawmakers-theme .footer-link,
+        .lawmakers-theme .section-title,
+        .lawmakers-theme .general-problem,
+        .lawmakers-theme .quotes-sources {
+            color: #ff4444 !important;
+            border-color: #ff4444 !important;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.7) !important;
+        }
+        
+        .lawmakers-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(255, 68, 68, 0.7) !important;
+            border-color: #ff4444 !important;
+        }
+        
+        .lawmakers-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(255, 68, 68, 0.8) !important;
+        }
+        
+        .final-theme .emphasized,
+        .final-theme .toggle-item,
+        .final-theme .footer-link,
+        .final-theme .section-title,
+        .final-theme .general-problem,
+        .final-theme .quotes-sources {
+            color: #ff0 !important;
+            border-color: #ff0 !important;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.7) !important;
+        }
+        
+        .final-theme .toggle-item:hover {
+            box-shadow: 0 0 25px 10px rgba(255, 255, 0, 0.7) !important;
+            border-color: #ff0 !important;
+        }
+        
+        .final-theme .toggle-item.expanded {
+            box-shadow: 0 0 30px 15px rgba(255, 255, 0, 0.8) !important;
+        }
+        
         #background-animation {
             position: fixed;
             top: 0;
@@ -46,6 +167,7 @@
             margin-bottom: 40px;
             padding: 40px 20px;
             text-align: center;
+            position: relative;
         }
         
         .main-title {
@@ -60,24 +182,26 @@
             font-size: 120px;
             color: #ff0;
             text-shadow: 0 0 30px rgba(255, 255, 0, 0.9);
-            animation: pulse 2s infinite;
             display: inline-block;
             margin: 0 15px;
+            position: relative;
+            transition: all 0.3s ease;
         }
         
-        @keyframes pulse {
-            0% {
-                text-shadow: 0 0 30px rgba(255, 255, 0, 0.9);
-                transform: scale(1);
-            }
-            50% {
-                text-shadow: 0 0 50px rgba(255, 255, 0, 1), 0 0 70px rgba(255, 255, 0, 0.7);
-                transform: scale(1.05);
-            }
-            100% {
-                text-shadow: 0 0 30px rgba(255, 255, 0, 0.9);
-                transform: scale(1);
-            }
+        .emphasized:hover {
+            color: #ffa500;
+            transform: scale(1.1);
+            text-shadow: 0 0 40px rgba(255, 165, 0, 0.9);
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #ff0;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
         }
         
         .toggle-section {
@@ -177,16 +301,26 @@
             display: none;
         }
         
-        .lawmakers-section {
-            grid-column: 1 / -1;
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
+        .stakeholder-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
         }
         
-        .lawmakers-item {
-            width: 50%;
-            min-height: 200px;
+        .general-problem, .quotes-sources {
+            padding: 20px;
+            border: 2px solid #ff0;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .section-title {
+            font-size: 28px;
+            color: #ff0;
+            margin-bottom: 15px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
         }
         
         .fatality-counter {
@@ -217,12 +351,14 @@
         .footer {
             text-align: center;
             padding: 20px;
-            color: #fff; /* Changed from #ff0 to #fff (white) */
-            border-top: 2px solid #ff0;
+            color: #fff;
+            border-top: 2px solid #ff0; /* Always yellow */
             margin-top: 40px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Changed to white shadow */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             background-color: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(2px);
+            position: relative;
+            z-index: 10;
         }
         
         .footer-links {
@@ -230,7 +366,7 @@
         }
         
         .footer-link {
-            color: #ff0; /* Kept yellow for the sources link */
+            color: #ff0;
             text-decoration: none;
             margin: 0 10px;
             transition: all 0.3s ease;
@@ -243,23 +379,6 @@
         
         .back-btn {
             display: none;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #ff0;
-            color: #000;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
-        }
-        
-        .back-btn:hover {
-            background-color: #ffcc00;
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(255, 255, 0, 0.9);
         }
         
         .image-container {
@@ -404,8 +523,8 @@
                 font-size: 18px;
             }
             
-            .lawmakers-item {
-                width: 100%;
+            .stakeholder-layout {
+                grid-template-columns: 1fr;
             }
             
             .sources-content {
@@ -436,118 +555,110 @@
     <div class="container">
         <div class="title-container">
             <h1 class="main-title">
-                Road Safety is <span class="emphasized">OUR</span> problem
+                Road Safety is <span class="emphasized" id="our-text">OUR</span> problem
             </h1>
         </div>
         
         <div class="toggle-section">
-            <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholdedr</div>
-                <div class="toggle-title">CARS</div>
+            <div class="toggle-item" onclick="expandSection(this, 'drivers')">
+                <div class="toggle-icon">🚗</div>
+                <div class="toggle-title">DRIVERS</div>
                 <div class="toggle-content">
-                    <h3>Vehicle Safety Innovations</h3>
-                    <p>Vehicles designed to protect occupants and pedestrians, but the driver also has to play his part; These include:</p>
-                    <ul style="text-align: left; margin: 20px 0;">
-                        <li>Phone usage while driving</li>
-                        <li>Speeding</li>
-                        <li>Not using signals</li>
-                        <li>Skipping stop signs</li>
-
-                    </ul>
-                    <div class="image-container">
-                        <img src="images/car-safety.jpg" alt="Car Safety Features" class="section-image" onerror="this.style.display='none'">
+                    <div class="stakeholder-layout">
+                        <div class="general-problem">
+                            <h3 class="section-title">General Problem</h3>
+                            <div id="drivers-problem"></div>
+                        </div>
+                        <div class="quotes-sources">
+                            <h3 class="section-title">Quotes/Sources</h3>
+                            <div id="drivers-quotes"></div>
+                        </div>
                     </div>
-                    <p>Human error remains the leading cause of road accidents.</p>
                 </div>
             </div>
             
-            <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+            <div class="toggle-item" onclick="expandSection(this, 'pedestrians')">
+                <div class="toggle-icon">🚶</div>
                 <div class="toggle-title">PEDESTRIANS</div>
                 <div class="toggle-content">
-                    <h3>Pedestrian Safety</h3>
-                        <li>Placeholder image</li>
-                    <p>Pedestrians are among the most vulnerable road users. Safety measures include:</p>
-                    <ul style="text-align: left; margin: 20px 0;">
-                        <li>Phone usage while walking</li>
-                        <li>Awareness in roads</li>
-                        <li>Ussage of designated walkways</li>
-                        <li>Placeholder text</li>
-
-                    </ul>
-                    <div class="image-container">
-                        <img src="images/pedestrian-safety.jpg" alt="Pedestrian Safety" class="section-image" onerror="this.style.display='none'">
+                    <div class="stakeholder-layout">
+                        <div class="general-problem">
+                            <h3 class="section-title">General Problem</h3>
+                            <div id="pedestrians-problem"></div>
+                        </div>
+                        <div class="quotes-sources">
+                            <h3 class="section-title">Quotes/Sources</h3>
+                            <div id="pedestrians-quotes"></div>
+                        </div>
                     </div>
-                    <p>Pedestrians have a huge toll on responsibility in road safety....... More texxt placeholder</p>
                 </div>
             </div>
             
-            <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+            <div class="toggle-item" onclick="expandSection(this, 'police')">
+                <div class="toggle-icon">👮</div>
                 <div class="toggle-title">POLICE OFFICERS</div>
                 <div class="toggle-content">
-                    <h3>Enforcing the Laws!</h3>
-                    <p>Police officers play a crucial role in maintaining road safety through:</p>
-                    <ul style="text-align: left; margin: 20px 0;">
-                        <li>Traffic law enforcement</li>
-                        <li>Security checkpoints </li>
-                        <li>Create fear among drivers</li>
-                        <li>Create consequences for actions</li>
-
-                    </ul>
-                    <div class="image-container">
-                        <img src="images/police-traffic.jpg" alt="Police Traffic Control" class="section-image" onerror="this.style.display='none'">
+                    <div class="stakeholder-layout">
+                        <div class="general-problem">
+                            <h3 class="section-title">General Problem</h3>
+                            <div id="police-problem"></div>
+                        </div>
+                        <div class="quotes-sources">
+                            <h3 class="section-title">Quotes/Sources</h3>
+                            <div id="police-quotes"></div>
+                        </div>
                     </div>
-                    <p>Their presence on roads serves as a deterrent to dangerous driving by using fear and consequence and helps ensure compliance with traffic laws.</p>
                 </div>
             </div>
             
-            <div class="toggle-item" onclick="expandSection(this)">
-                <div class="toggle-icon">Placeholder Image</div>
+            <div class="toggle-item" onclick="expandSection(this, 'urban')">
+                <div class="toggle-icon">🏙️</div>
                 <div class="toggle-title">URBAN PLANNERS</div>
                 <div class="toggle-content">
-                    <h3>Designing for the future</h3>
-                    <p>Urban planners contribute to road safety through thoughtful infrastructure design:</p>
-                    <ul style="text-align: left; margin: 20px 0;">
-                        <li>Separated </li>
-                    </ul>
-                    <div class="image-container">
-                        <img src="images/urban-planning.jpg" alt="Urban Planning" class="section-image" onerror="this.style.display='none'">
+                    <div class="stakeholder-layout">
+                        <div class="general-problem">
+                            <h3 class="section-title">General Problem</h3>
+                            <div id="urban-problem"></div>
+                        </div>
+                        <div class="quotes-sources">
+                            <h3 class="section-title">Quotes/Sources</h3>
+                            <div id="urban-quotes"></div>
+                        </div>
                     </div>
-                    <p>Well-designed urban environments can significantly reduce the risk of accidents and improve overall road safety for all users.</p>
                 </div>
             </div>
             
-            <div class="lawmakers-section">
-                <div class="toggle-item lawmakers-item" onclick="expandSection(this)">
-                    <div class="toggle-icon">Placeholdder image</div>
-                    <div class="toggle-title">LAWMAKERS</div>
-                    <div class="toggle-content">
-                        <h3>Legislative Impact on Road Safety</h3>
-                        <p>Lawmakers play one of the most crucial roles in shaping road safety through legislation, policy and funding:</p>
-                        <ul style="text-align: left; margin: 20px 0;">
-                            <li>Regulating road Safety</li>
-                            <li>Funding for road infrastructure projects</li>
-                            <li>Policy for promoting safe driving</li>
-                            <li>Enforcement standards and consequence</li>
-                        </ul>
-                        <div class="image-container">
-                            <img src="images/lawmakers.jpg" alt="Lawmakers" class="section-image" onerror="this.style.display='none'">
+            <div class="toggle-item" onclick="expandSection(this, 'lawmakers')">
+                <div class="toggle-icon">⚖️</div>
+                <div class="toggle-title">LAWMAKERS</div>
+                <div class="toggle-content">
+                    <div class="stakeholder-layout">
+                        <div class="general-problem">
+                            <h3 class="section-title">General Problem</h3>
+                            <div id="lawmakers-problem"></div>
                         </div>
-                        <p>Effective legislation creates the framework for safer roads, setting standards and allocating resources that protect all road users.</p>
+                        <div class="quotes-sources">
+                            <h3 class="section-title">Quotes/Sources</h3>
+                            <div id="lawmakers-quotes"></div>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <div class="toggle-item" onclick="expandSection(this, 'final')">
+                <div class="toggle-icon">💭</div>
+                <div class="toggle-title">FINAL MESSAGE</div>
+                <div class="toggle-content">
+                    <div id="final-message-content"></div>
                 </div>
             </div>
         </div>
-        
-        <button class="back-btn" onclick="collapseAll()">Back to All Sections</button>
         
         <div class="fatality-counter">
             <div class="counter-text">By the time you have read this,</div>
             <div class="counter-number" id="fatalities-count">0</div>
             <div class="counter-text">people have been killed from road fatalities</div>
-            <div class="counter-text">*acording to the world health organization</div>
-
+            <div class="counter-text">*according to the world health organization</div>
         </div>
     </div>
     
@@ -567,7 +678,7 @@
             </div>
             
             <div class="source-category">
-                <h3 class="category-title">Data Sources TTESST</h3>
+                <h3 class="category-title">Data Sources</h3>
                 <ul class="source-list">
                     <li class="source-item">
                         Test Test Test
@@ -578,6 +689,101 @@
     </div>
 
     <script>
+        // Text content stored in variables
+        const content = {
+            drivers: {
+                problem: `<p><strong>DRIVERS:</strong> Placeholder text about driver-related road safety issues. Vehicles designed to protect occupants and pedestrians, but the driver also has to play his part. These include:</p>
+                         <ul style="text-align: left; margin: 20px 0;">
+                             <li>Phone usage while driving</li>
+                             <li>Speeding</li>
+                             <li>Not using signals</li>
+                             <li>Skipping stop signs</li>
+                         </ul>
+                         <p>Human error remains the leading cause of road accidents.</p>`,
+                quotes: `<p>Placeholder quotes and sources about driver safety.</p>
+                         <p>"Sample quote about vehicle safety" - Source Name</p>
+                         <p>"Another relevant statistic" - Research Institute</p>`
+            },
+            pedestrians: {
+                problem: `<p><strong>PEDESTRIANS:</strong> Pedestrians are among the most vulnerable road users. Certainn measures that greatly increase riskinclude:</p>
+                         <ul style="text-align: left; margin: 20px 0;">
+                             <li>Phone usage while walking</li>
+                             <li>Jaywalking</li>
+                             <li>Bad visibility (via low lights)</li>
+                             <li>Impairment (drunk or substance)</li>
+                         </ul>
+                         <p>Pedestrians have a huge responsibility in road safety.</p>`,
+                quotes: `<p>Placeholder quotes and sources about pedestrian safety.</p>
+                         <p>"Sample quote about pedestrian awareness" - Source Name</p>
+                         <p>"Statistics on pedestrian accidents" - Research Institute</p>`
+            },
+            police: {
+                problem: `<p><strong>POLICE OFFICERS:</strong> Placeholder text about police-related road safety issues. Police officers play a crucial role in maintaining road safety through:</p>
+                         <ul style="text-align: left; margin: 20px 0;">
+                             <li>Traffic law enforcement</li>
+                             <li>Security checkpoints</li>
+                             <li>Creating deterrents for dangerous driving</li>
+                             <li>Ensuring consequences for traffic violations</li>
+                         </ul>
+                         <p>Their presence on roads serves as a deterrent to dangerous driving.</p>`,
+                quotes: `<p>Placeholder quotes and sources about police enforcement.</p>
+                         <p>"Sample quote about traffic law enforcement" - Source Name</p>
+                         <p>"Effectiveness of police presence" - Research Institute</p>`
+            },
+            urban: {
+                problem: `<p><strong>URBAN PLANNERS:</strong> Placeholder text about urban planning-related road safety issues. Urban planners contribute to road safety through thoughtful infrastructure design:</p>
+                         <ul style="text-align: left; margin: 20px 0;">
+                             <li>Separated bike lanes</li>
+                             <li>Pedestrian-friendly crossings</li>
+                             <li>Traffic calming measures</li>
+                             <li>Proper signage and lighting</li>
+                         </ul>
+                         <p>Well-designed urban environments can significantly reduce the risk of accidents.</p>`,
+                quotes: `<p>Placeholder quotes and sources about urban planning.</p>
+                         <p>"Sample quote about infrastructure design" - Source Name</p>
+                         <p>"test ressearch</p>`
+            },
+            lawmakers: {
+                problem: `<p><strong>LAWMAKERS:</strong> Placeholder text about legislation-related road safety issues. Lawmakers play one of the most crucial roles in shaping road safety through legislation, policy and funding:</p>
+                         <ul style="text-align: left; margin: 20px 0;">
+                             <li>Regulating road safety standards</li>
+                             <li>Funding for road infrastructure projects</li>
+                             <li>Policy for promoting safe driving</li>
+                             <li>Enforcement standards and consequences</li>
+                         </ul>
+                         <p>Effective legislation creates the framework for safer roads.</p>`,
+                quotes: `<p>Placeholder quotes and sources about legislation.</p>
+                         <p>"Sample quote about road safety laws" - Source Name</p>
+                         <p>"test ressearchtest ressearchtest ressearch</p>`
+            },
+            final: {
+                message: `<div style="text-align: center; padding: 20px;">
+                            <h3 style="color: #ff0; margin-bottom: 20px; font-size: 28px;">Final Message</h3>
+                            <p style="font-size: 20px; line-height: 1.6;">
+                                Road safety is a shared responsibility that requires the collective effort of all stakeholders. 
+                                Through awareness, education, and proper enforcement, we can significantly reduce road fatalities 
+                                atest ressearchtest ressearchtest ressearch
+                            </p>
+                            <p style="font-size: 20px; line-height: 1.6; margin-top: 20px;">
+                                Remember: Every decision you make on the road affects not just your safety, but the safety of others too.
+                            </p>
+                         </div>`
+            }
+        };
+
+        // Initialize content
+        document.getElementById('drivers-problem').innerHTML = content.drivers.problem;
+        document.getElementById('drivers-quotes').innerHTML = content.drivers.quotes;
+        document.getElementById('pedestrians-problem').innerHTML = content.pedestrians.problem;
+        document.getElementById('pedestrians-quotes').innerHTML = content.pedestrians.quotes;
+        document.getElementById('police-problem').innerHTML = content.police.problem;
+        document.getElementById('police-quotes').innerHTML = content.police.quotes;
+        document.getElementById('urban-problem').innerHTML = content.urban.problem;
+        document.getElementById('urban-quotes').innerHTML = content.urban.quotes;
+        document.getElementById('lawmakers-problem').innerHTML = content.lawmakers.problem;
+        document.getElementById('lawmakers-quotes').innerHTML = content.lawmakers.quotes;
+        document.getElementById('final-message-content').innerHTML = content.final.message;
+
         // Background animation with rotating squares
         const canvas = document.getElementById('background-animation');
         const ctx = canvas.getContext('2d');
@@ -595,14 +801,14 @@
         // Square class for background animation
         class Square {
             constructor() {
-                this.size = Math.random() * 40 + 20; // Random size between 20 and 60
+                this.size = Math.random() * 40 + 20;
                 this.x = Math.random() * (canvas.width - this.size);
                 this.y = Math.random() * (canvas.height - this.size);
-                this.speedX = (Math.random() - 0.5) * 0.5; // Very slow speed
+                this.speedX = (Math.random() - 0.5) * 0.5;
                 this.speedY = (Math.random() - 0.5) * 0.5;
-                this.rotation = Math.random() * Math.PI * 2; // Random initial rotation
-                this.rotationSpeed = (Math.random() - 0.5) * 0.01; // Slow rotation speed
-                this.color = 'rgba(255, 255, 0, 0.5)'; // Fixed opacity - very subtle
+                this.rotation = Math.random() * Math.PI * 2;
+                this.rotationSpeed = (Math.random() - 0.5) * 0.01;
+                this.color = 'rgba(255, 255, 0, 0.5)'; // Default yellow
             }
             
             update() {
@@ -631,7 +837,7 @@
         
         // Create squares
         const squares = [];
-        const squareCount = 15; // Small number for subtle effect
+        const squareCount = 15;
         
         for (let i = 0; i < squareCount; i++) {
             squares.push(new Square());
@@ -651,29 +857,98 @@
         
         // Start animation
         animate();
+
+        // Continuous particle animation for title
+        function createParticle() {
+            const ourText = document.getElementById('our-text');
+            const rect = ourText.getBoundingClientRect();
+            
+            // Create particle at random position within the "OUR" text
+            const x = rect.left + Math.random() * rect.width;
+            const y = rect.top + Math.random() * rect.height;
+            
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            document.body.appendChild(particle);
+            
+            // Random direction and distance
+            const angle = Math.random() * Math.PI * 2;
+            const distance = 30 + Math.random() * 70;
+            const targetX = x + Math.cos(angle) * distance;
+            const targetY = y + Math.sin(angle) * distance;
+            
+            // Animate particle
+            particle.animate([
+                { transform: 'translate(0, 0) scale(1)', opacity: 0.8 },
+                { transform: `translate(${targetX - x}px, ${targetY - y}px) scale(0)`, opacity: 0 }
+            ], {
+                duration: 800 + Math.random() * 1200,
+                easing: 'cubic-bezier(0.1, 0.8, 0.2, 1)'
+            }).onfinish = () => {
+                particle.remove();
+            };
+        }
         
-        // Existing functionality - KEEPING YOUR ORIGINAL LOGIC
+        // Continuous particle emission
+        setInterval(createParticle, 100);
+        
+        // Existing functionality
         let startTime = Date.now();
         let fatalities = 0;
         let fatalitiesElement = document.getElementById('fatalities-count');
-        let backButton = document.querySelector('.back-btn');
+        let expandedSection = null;
+        let expandedType = null;
         
-        function expandSection(element) {
-            // Hide all other sections - KEEPING YOUR ORIGINAL FUNCTIONALITY
+        // Color mapping for squares
+        const colorMap = {
+            drivers: 'rgba(0, 255, 255, 0.5)',
+            pedestrians: 'rgba(255, 165, 0, 0.5)',
+            police: 'rgba(0, 68, 255, 0.5)',
+            urban: 'rgba(255, 0, 255, 0.5)',
+            lawmakers: 'rgba(255, 68, 68, 0.5)',
+            final: 'rgba(255, 255, 0, 0.5)'
+        };
+        
+        function expandSection(element, type) {
+            // If clicking the same expanded section, collapse it
+            if (expandedSection === element && element.classList.contains('expanded')) {
+                collapseAll();
+                return;
+            }
+            
+            // Remove any existing theme classes
+            document.body.classList.remove('drivers-theme', 'pedestrians-theme', 'police-theme', 
+                                         'urban-theme', 'lawmakers-theme', 'final-theme');
+            
+            // Hide all other sections
             document.querySelectorAll('.toggle-item').forEach(item => {
                 if (item !== element) {
                     item.classList.add('hidden');
                 }
             });
             
+            // Hide fatality counter for all sections except final message
+            if (type !== 'final') {
+                document.querySelector('.fatality-counter').classList.add('hidden');
+            } else {
+                document.querySelector('.fatality-counter').classList.remove('hidden');
+            }
+            
             // Expand the clicked section
             element.classList.add('expanded');
+            expandedSection = element;
+            expandedType = type;
             
-            // Show the back button
-            backButton.style.display = 'block';
+            // Add theme class to body
+            document.body.classList.add(`${type}-theme`);
             
-            // Scroll to the expanded section
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Change square colors
+            const newColor = colorMap[type];
+            squares.forEach(square => {
+                square.color = newColor;
+            });
         }
         
         function collapseAll() {
@@ -683,11 +958,21 @@
                 item.classList.remove('hidden');
             });
             
-            // Hide the back button
-            backButton.style.display = 'none';
+            // Show fatality counter
+            document.querySelector('.fatality-counter').classList.remove('hidden');
             
-            // Scroll back to top of toggle section
-            document.querySelector('.toggle-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Remove theme classes
+            document.body.classList.remove('drivers-theme', 'pedestrians-theme', 'police-theme', 
+                                         'urban-theme', 'lawmakers-theme', 'final-theme');
+            
+            // Reset square colors to default yellow
+            squares.forEach(square => {
+                square.color = 'rgba(255, 255, 0, 0.5)';
+            });
+            
+            // Reset expanded section
+            expandedSection = null;
+            expandedType = null;
         }
         
         // Sources modal functionality
